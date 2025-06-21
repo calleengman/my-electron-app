@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "my first electron app",
   "main": "main.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "update-electron-app": "^3.1.1"
   },
   "repository": {
-  "type": "git",
-  "url": "https://github.com/calleengman/my-electron-app.git"
-}
+    "type": "git",
+    "url": "https://github.com/calleengman/my-electron-app.git"
+  }
 }
