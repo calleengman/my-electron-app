@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
+const { updateElectronApp } = require('update-electron-app')
 
 
 const createWindow = () => {
@@ -15,7 +16,8 @@ const createWindow = () => {
 }
 
 app.whenReady().then(() => {
-  require('update-electron-app')()
+  // Automatically check for updates
+  updateElectronApp()
   ipcMain.handle('ping', () => 'pong')
   createWindow()
 
