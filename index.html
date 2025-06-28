@@ -5,32 +5,40 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'"
     />
     <meta
       http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootswatch/dist/darkly/bootstrap.min.css"
     />
     <title>Hello from Electron renderer!</title>
   </head>
-  <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
-    <p>Welcome to your Electron app! This is some added text.</p>
-      <div>
-        <h2>A Poem for Your Electron App</h2>
-        <p>
-        In windows bright, your code will run,<br>
-      With JavaScript, the work is done.<br>
-      Electron brings the web to life,<br>
-      In desktop apps, with little strife.<br>
-      So build and dream, let features grow,<br>
-        Your app will shine, let users know!
-        </p>
+  <body class="p-4">
+    <div class="container">
+      <h1 class="mb-4">Hello from Electron renderer!</h1>
+      <p class="lead">👋</p>
+      <p id="info" class="mb-3"></p>
+      <p>Welcome to your Electron app! This is some added text.</p>
+      <div class="card my-3">
+        <div class="card-body">
+          <h2 class="card-title">A Poem for Your Electron App</h2>
+          <p class="card-text">
+            In windows bright, your code will run,<br>
+            With JavaScript, the work is done.<br>
+            Electron brings the web to life,<br>
+            In desktop apps, with little strife.<br>
+            So build and dream, let features grow,<br>
+            Your app will shine, let users know!
+          </p>
+        </div>
       </div>
-      <button id="ping-btn">Ping</button>
-      <p id="ping-result"></p>
-    </body>
+      <button id="ping-btn" class="btn btn-primary">Ping</button>
+      <p id="ping-result" class="mt-2"></p>
+    </div>
+  </body>
   <script src="./renderer.js"></script>
 </html>
