@@ -7,13 +7,27 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  release-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - run: npm install
+      - run: npm test
+      - run: npm run publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  release-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: sudo apt-get update && sudo apt-get install -y dpkg fakeroot rpm
       - run: npm install
       - run: npm test
       - run: npm run publish
