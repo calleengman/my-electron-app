@@ -2,6 +2,8 @@
 
 This project is a simple Electron application created while following the official getting started guide. It showcases how to build a minimal desktop app using JavaScript, HTML, and CSS.
 
+The UI is styled with the [Bootswatch](https://bootswatch.com/) **Darkly** theme via Bootstrap, installed from npm.
+
 ## Getting Started
 
 1. Install the dependencies:
