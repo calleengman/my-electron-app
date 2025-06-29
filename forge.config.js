@@ -18,10 +18,12 @@ module.exports = {
     {
       name: '@electron-forge/maker-deb',
       config: {},
+      platforms: ['linux']
     },
     {
       name: '@electron-forge/maker-rpm',
       config: {},
+      platforms: ['linux']
     },
   ],
   plugins: [
